@@ -5,13 +5,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import co.com.jcd.springboot.di.app.models.services.MiServicio;
+import co.com.jcd.springboot.di.app.models.services.IServicio;
 
 @Controller
 public class IndexController {
 	
 	@Autowired // inyectar un objeto que está registrado en el contenedor de Spring
-	private MiServicio servicio; 
+	private IServicio servicio; // al inyectar la interfaz el código queda aún menos acoplado
 	
 	@GetMapping({"/","","/index"})
 	public String index(Model model) {
