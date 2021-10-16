@@ -11,8 +11,7 @@ import co.com.jcd.springboot.di.app.models.services.IServicio;
 @Controller
 public class IndexController {
 	
-	@Autowired // inyectar un objeto que está registrado en el contenedor de Spring
-	@Qualifier("miServicioComplejo") // indica que se va inyectar el bean que implementa la interfaz con este calificador 
+	@Autowired // inyectar un objeto que está registrado en el contenedor de Spring	
 	private IServicio servicio; // al inyectar la interfaz el código queda aún menos acoplado
 
 	@GetMapping({"/","","/index"})

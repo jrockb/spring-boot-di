@@ -3,7 +3,7 @@ package co.com.jcd.springboot.di.app.models.services; // todas las clases deben 
 import org.springframework.stereotype.Component;
 
 
-@Component("miServicioComplejo") 
+//@Component("miServicioComplejo") 
 public class MiServicioComplejo implements IServicio{ 
 	
 	@Override
