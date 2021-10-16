@@ -7,7 +7,7 @@ public class MiServicio implements IServicio{ // un servicio siempre debe tener 
 	
 	@Override
 	public String operacion() {
-		return "ejecutando algun proceso importante...";
+		return "ejecutando algun proceso importante simple...";
 	}
 
 }

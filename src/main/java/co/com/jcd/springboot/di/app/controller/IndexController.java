@@ -10,13 +10,8 @@ import co.com.jcd.springboot.di.app.models.services.IServicio;
 @Controller
 public class IndexController {
 	
-	//@Autowired // inyectar un objeto que está registrado en el contenedor de Spring
+	@Autowired // inyectar un objeto que está registrado en el contenedor de Spring
 	private IServicio servicio; // al inyectar la interfaz el código queda aún menos acoplado
-	
-	@Autowired // ejemplo de inyección sobre constructor
-	public IndexController(IServicio servicio) {
-		this.servicio = servicio;
-	}
 
 	@GetMapping({"/","","/index"})
 	public String index(Model model) {
