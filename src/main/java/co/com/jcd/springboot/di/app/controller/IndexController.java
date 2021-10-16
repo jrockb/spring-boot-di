@@ -10,7 +10,7 @@ import co.com.jcd.springboot.di.app.models.services.IServicio;
 @Controller
 public class IndexController {
 	
-	@Autowired // inyectar un objeto que está registrado en el contenedor de Spring
+	//@Autowired // inyectar un objeto que está registrado en el contenedor de Spring
 	private IServicio servicio; // al inyectar la interfaz el código queda aún menos acoplado
 	
 	@GetMapping({"/","","/index"})
@@ -18,5 +18,12 @@ public class IndexController {
 		model.addAttribute("objeto", servicio.operacion());
 		return "index";		
 	}
+	
+	@Autowired // ejemplo de inyección de dependecias desde el métopdo set, en este caso Autowired solo debe estar sobre este método
+	public void setServicio(IServicio servicio) {
+		this.servicio = servicio;
+	}
+	
+	
 
 }
